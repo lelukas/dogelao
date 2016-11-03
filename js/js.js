@@ -25,8 +25,16 @@
 window.onload = function () {
 
     setTimeout(function () {
-        $('.logo').removeClass("").addClass("bounceIn");
+        $('.logo').addClass("bounceIn");
     },1000);
+
+    setTimeout(function () {
+        $('.service-name, .service-name-shadow').addClass("bounceIn");
+    },1500);
+
+    setTimeout(function () {
+        $('nav').addClass("slideInDown");
+    },1800);
 
     var nDoge = 60;
 
@@ -45,7 +53,7 @@ window.onload = function () {
     }
     setTimeout(rain(), 2000);
 };
-var greetings = ["wow", "such fun", "so doge", "so much doge rain", "such navbar", "such home", "so rounded border", "so many accounts", "dogelão", "so much #BFA961"];
+var greetings = ["wow", "such fun", "so doge", "so much doge rain", "such navbar", "such home", "so rounded border", "so many accounts", "dogelão", "so much #BFA961", "so much hold spacebar"];
 var lastgreeting;
 var number = 1;
 
@@ -59,5 +67,10 @@ setInterval(function () {
     lastgreeting = greetings[number];
 
 },1000);
+
+
+$(document).mouseover(function (event) {
+
+})
 
 

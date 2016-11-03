@@ -3109,11 +3109,15 @@
     -webkit-transform: translate3d(0, -100%, 0);
     transform: translate3d(0, -100%, 0);
     visibility: visible;
+    /*custom*/
+    opacity:0;
   }
 
   to {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
+    /*custom*/
+    opacity:1;
   }
 }
 
@@ -3127,11 +3131,15 @@
     -webkit-transform: translate3d(-100%, 0, 0);
     transform: translate3d(-100%, 0, 0);
     visibility: visible;
+    /*custom*/
+    opacity:0;
   }
 
   to {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
+    /*custom*/
+    opacity:1;
   }
 }
 

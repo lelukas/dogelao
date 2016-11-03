@@ -14,7 +14,7 @@
 <body>
 
 
-    <nav class="nav-extended brown darken-4">
+    <nav class="nav-extended brown darken-4 animated">
       <div class="container">
       <div class="nav-wrapper">
         <div class="row">
@@ -43,6 +43,11 @@
           <div class="border"></div>
           <img class="doge" src="images/doge-01.png" alt="">
         </div>
+    </div>
+
+    <div id="port" class="parallax-container">
+      <p class="service-name animated parallax-layer">Dogelão</p>
+      <p class="service-name shadow animated parallax-layer">Dogelão</p>
     </div>
   </div>
 
@@ -123,6 +128,16 @@
   <script src="js/materialize.js"></script>
   <script src="js/init.js"></script>
   <script src="js/js.js"></script>
+    <script src="js/jquery.parallax.js"></script>
+    <script>
+      jQuery(document).ready(function(){
+        // Declare parallax on layers
+        jQuery('.parallax-layer').parallax(
+        {mouseport: jQuery("#port")},
 
+        {xparallax: "8%", yparallax: "6%", yorigin: 0.9},
+        {xparallax: "10%", yparallax: "8%", yorigin: 0.9}
+        )});
+    </script>
   </body>
 </html>
