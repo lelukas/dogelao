@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="css/font.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/materialdesignicons.min.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+</head>
+<body>
+
+    <nav>
+        <div class="nav-wrapper amber accent-1">
+            <form>
+                <div center class="input-field">
+                    <input id="search" type="search" required placeholder="Pesquise por leilões ou usuários aqui">
+                    <label for="search"><i class="material-icons">search</i></label>
+                    <i class="material-icons">close</i>
+                </div>
+            </form>
+        </div>
+    </nav>
+
+
+    <!--<div class="sideNav brown darken-4">-->
+        <!--<div class="collection brown darken-4">-->
+            <!--<a href="#!" class="collection-item brown darken-4">Alvin</a>-->
+            <!--<a href="#!" class="collection-item brown darken-4">Alvin</a>-->
+            <!--<a href="#!" class="collection-item brown darken-4">Alvin</a>-->
+            <!--<a href="#!" class="collection-item brown darken-4">Alvin</a>-->
+        <!--</div>-->
+    <!--</div>-->
+    <ul id="slide-out" class="side-nav fixed brown darken-4">
+        <li><a href="">Home</a></li>
+        <li>
+            <ul class="collapsible collapsible-accordion">
+                <li>
+                    <a class="collapsible-header">Categorias</a>
+                    <div class="collapsible-body">
+                        <ul class="brown darken-4">
+                            <a href="">
+                                <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                                    <path fill="#FFFFFF" d="M7,6H17A6,6 0 0,1 23,12A6,6 0 0,1 17,18C15.22,18 13.63,17.23 12.53,16H11.47C10.37,17.23 8.78,18 7,18A6,6 0 0,1 1,12A6,6 0 0,1 7,6M6,9V11H4V13H6V15H8V13H10V11H8V9H6M15.5,12A1.5,1.5 0 0,0 14,13.5A1.5,1.5 0 0,0 15.5,15A1.5,1.5 0 0,0 17,13.5A1.5,1.5 0 0,0 15.5,12M18.5,9A1.5,1.5 0 0,0 17,10.5A1.5,1.5 0 0,0 18.5,12A1.5,1.5 0 0,0 20,10.5A1.5,1.5 0 0,0 18.5,9Z" />
+                                </svg>
+                                Eletrônicos
+                            </a>
+                            <a href="#!">
+                                <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                                    <path fill="#FFFFFF" d="M20,17H4V5H20M20,3H4C2.89,3 2,3.89 2,5V17A2,2 0 0,0 4,19H8V21H16V19H20A2,2 0 0,0 22,17V5C22,3.89 21.1,3 20,3Z" />
+                                </svg>
+                                Eletrodomésticos
+                            </a>
+                            <a href="#!">
+                                <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                                    <path fill="#FFFFFF" d="M5,11L6.5,6.5H17.5L19,11M17.5,16A1.5,1.5 0 0,1 16,14.5A1.5,1.5 0 0,1 17.5,13A1.5,1.5 0 0,1 19,14.5A1.5,1.5 0 0,1 17.5,16M6.5,16A1.5,1.5 0 0,1 5,14.5A1.5,1.5 0 0,1 6.5,13A1.5,1.5 0 0,1 8,14.5A1.5,1.5 0 0,1 6.5,16M18.92,6C18.72,5.42 18.16,5 17.5,5H6.5C5.84,5 5.28,5.42 5.08,6L3,12V20A1,1 0 0,0 4,21H5A1,1 0 0,0 6,20V19H18V20A1,1 0 0,0 19,21H20A1,1 0 0,0 21,20V12L18.92,6Z" />
+                                </svg>
+                                Automóveis
+                            </a>
+                            <a href="#!">
+                                <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                                    <path fill="#FFFFFF" d="M7,6H9A2,2 0 0,1 11,8V12H5V8A2,2 0 0,1 7,6M15,6H17A2,2 0 0,1 19,8V12H13V8A2,2 0 0,1 15,6M1,9H2A1,1 0 0,1 3,10V12A2,2 0 0,0 5,14H19A2,2 0 0,0 21,12V11L21,10A1,1 0 0,1 22,9H23A1,1 0 0,1 24,10V19H21V17H3V19H0V10A1,1 0 0,1 1,9Z" />
+                                </svg>
+                                Móveis
+                            </a>
+                            <a href="#!">
+                                <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                                    <path fill="#FFFFFF" d="M6,21V8A2,2 0 0,1 8,6L16,3V6A2,2 0 0,1 18,8V21H12V16H8V21H6M14,19H16V16H14V19M8,13H10V9H8V13M12,13H16V9H12V13Z" />
+                                </svg>
+                                Imóveis
+                            </a>
+                            <a href="#!">
+                                <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                                    <path fill="#FFFFFF" d="M12,2C15.31,2 18,4.66 18,7.95C18,12.41 12,19 12,19C12,19 6,12.41 6,7.95C6,4.66 8.69,2 12,2M12,6A2,2 0 0,0 10,8A2,2 0 0,0 12,10A2,2 0 0,0 14,8A2,2 0 0,0 12,6M20,19C20,21.21 16.42,23 12,23C7.58,23 4,21.21 4,19C4,17.71 5.22,16.56 7.11,15.83L7.75,16.74C6.67,17.19 6,17.81 6,18.5C6,19.88 8.69,21 12,21C15.31,21 18,19.88 18,18.5C18,17.81 17.33,17.19 16.25,16.74L16.89,15.83C18.78,16.56 20,17.71 20,19Z" />
+                                </svg>
+                                Terrenos e Lotes
+                            </a>
+                            <a href="#!">
+                                <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                                    <path fill="#FFFFFF" d="M4,18V20H8V18H4M4,14V16H14V14H4M10,18V20H14V18H10M16,14V16H20V14H16M16,18V20H20V18H16M2,22V8L7,12V8L12,12V8L17,12L18,2H21L22,12V22H2Z" />
+                                </svg>
+                                Aparelhos Industriais
+                            </a>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </li>
+        <li><a href="#!">Meu Perfil</a></li>
+        <li><a href="#!">Configurações</a></li>
+    </ul>
+    <li data-activates="slide-out"></li>
+
+
+    <main>
+
+        <div class="row">
+            <div class="col s9 gambi">
+                <ul class="tabs ">
+                        <li class="tab col s3"><a class="active brown-text" href="#new">Novos</a></li>
+                        <li class="tab col s3"><a class="brown-text" href="#hot">Mais visitados</a></li>
+                        <li class="tab col s3"><a class="brown-text" href="#ending">Acabando</a></li>
+                </ul>
+            </div>
+            <div id="new" class="col s12">
+                <div class="row">
+                    <div class="col s4">
+                        <div class="card medium">
+                            <div class="card-image">
+                                <img src="sample-1.jpg" >
+                                <span class="card-title">Card Title</span>
+                            </div>
+                            <div class="card-content">
+                                <p>I am a very simple card. I am good at containing small bits of information.
+                                    I am convenient because I require little markup to use effectively.</p>
+                            </div>
+                            <div class="card-action">
+                                <a href="#">This is a link</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s4">
+                        <div class="card medium">
+                            <div class="card-image">
+                                <img src="sample-2.jpg" >
+                                <span class="card-title">Card Title</span>
+                            </div>
+                            <div class="card-content">
+                                <p>I am a very simple card. I am good at containing small bits of information.
+                                    I am convenient because I require little markup to use effectively.</p>
+                            </div>
+                            <div class="card-action">
+                                <a href="#">This is a link</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s4">
+                        <div class="card medium">
+                            <div class="card-image">
+                                <img src="sample-3.jpg" >
+                                <span class="card-title">Card Title</span>
+                            </div>
+                            <div class="card-content">
+                                <p>I am a very simple card. I am good at containing small bits of information.
+                                    I am convenient because I require little markup to use effectively.</p>
+                            </div>
+                            <div class="card-action">
+                                <a href="#">This is a link</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s4">
+                        <div class="card medium">
+                            <div class="card-image">
+                                <img src="4.jpg" >
+                                <span class="card-title">Card Title</span>
+                            </div>
+                            <div class="card-content">
+                                <p>I am a very simple card. I am good at containing small bits of information.
+                                    I am convenient because I require little markup to use effectively.</p>
+                            </div>
+                            <div class="card-action">
+                                <a href="#">This is a link</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="hot" class="col s12">Test 2</div>
+        <div id="ending" class="col s12">Test 4</div>
+
+
+
+
+    </main>
+
+
+    <script src="js/jquery.js"></script>
+    <script src="js/materialize.js"></script>
+    <script src="js/init.js"></script>
+    <script>
+        $('nav+ul+li').sideNav({
+            menuWidth: 400,
+            closeOnClick: false
+        });
+
+        $("label+i").click(function () {
+            $(this).prev().prev().val("")
+        });
+
+
+    </script>
+</body>
+</html>

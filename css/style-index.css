@@ -1,0 +1,136 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+	font-size: inherit;
+}
+
+
+body{
+    animation-name: color;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes color{
+    100%{
+        background-color: #F2EB99;
+    }
+}
+
+.outer-circle{
+    width: 400px;
+    height: 400px;
+    background: #f57f17;
+    border-radius: 50%;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.inner-circle{
+    width: 380px;
+    height: 380px;
+    background: #BFA961;
+    border-radius: 50%;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.doge{
+    width: 302px;
+    height:auto;
+    position: absolute;
+    left: calc(50% - 151px);
+}
+
+.border{
+    width: 400px;
+    height: 400px;
+    border: 13px solid #432715;
+    border-radius: 50%;
+    position: absolute;
+    top: calc(50% - 200px);
+    left: calc(50% - 200px);
+    z-index: 99;
+}
+
+.logo{
+    opacity: 0 !important;
+}
+
+.icon{
+    will-change: top,left;
+    z-index: -5;
+    position: absolute;
+    top: -125%;
+    transform: scale(0.05);
+    animation-name: fall;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.rain{
+    top: 0;
+    left: 0;
+    position: absolute;
+    width:100%;
+    height:100%;
+    z-index: -5;
+}
+
+@keyframes fall {
+    100%{
+        top: 0;
+    }
+}
+
+.phrase{
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    font-size: 2em !important;
+    font-family: "Comic Sans MS";
+}
+
+.service-name{
+    font-family: "I fink u freeky";
+    font-size: 10em;
+    position: absolute;
+    top: 35%;
+    left: calc(50% - 291px);
+    z-index: 90;
+    color: #C4BC3A;
+    opacity: 0;
+}
+
+.shadow{
+    font-size: 10em;
+    top: calc(35% + 3px);
+    left: calc(50% - 295px);
+    color: #895229;
+    z-index: -1;
+}
+
+#port{
+    /*background: red;*/
+    width: 100%;
+    height: 92%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    /*! *opacity: 0.4;*!*/
+    z-index: 91;
+}
