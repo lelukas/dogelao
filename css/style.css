@@ -21,11 +21,13 @@ svg{
     color: white;
 }
 
-ul>li:first-child+li{
-    padding-left: 16px;
+li+li>ul>li>a{
+    margin-left: 16px;
+    /*width:100%;*/
+    /*padding-left: 16px;*/
 }
 
-input::-webkit-input-placeholder{
+input::-webkit-input-placeholder,textarea::-webkit-input-placeholder{
     color: #868686;
 }
 
@@ -40,4 +42,66 @@ ul.tabs{
 .gambi{
     position: relative;
     margin-left: calc(60% - 345px) !important;
+    margin-top: 10px;
+}
+.side-nav{
+    width: 400px;
+}
+
+.side-nav h3{
+    margin-left: 30px;
+}
+
+h4{
+    background: rgba(0, 0, 0, 0.05);
+    padding-left: 10px;
+}
+
+h4>svg{
+    transform: scale(2.5);
+    margin-bottom: 11px;
+    margin-left: 20px;
+}
+
+form>div>div>input:first-child{
+    margin-top: 36px !important;
+}
+
+.teste{
+    position: absolute;
+    top: 39%;
+    right: 10%;
+    width:210px;
+    height:210px;
+    background-color: #C5C5C5;
+
+    display: -webkit-flexbox;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    justify-content: center;
+}
+.teste>img{
+    /*position: relative;*/
+
+    /*background: #3A6F9A;*/
+
+    vertical-align: middle;
+    max-height: 200px;
+    /*max-width: 200px;*/
+
+}
+
+.helper{
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+#modal1{
+    max-height: 85% !important;
 }

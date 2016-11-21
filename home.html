@@ -11,12 +11,13 @@
     <link href="css/animate.css" rel="stylesheet">
     <link href="css/materialdesignicons.min.css" media="all" rel="stylesheet" type="text/css" />
     <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link rel="stylesheet" href="picnic.css">
 
 </head>
 <body>
 
-    <nav>
-        <div class="nav-wrapper amber accent-1">
+    <nav class="amber accent-1">
+        <div class="nav-wrapper ">
             <form>
                 <div center class="input-field">
                     <input id="search" type="search" required placeholder="Pesquise por leilões ou usuários aqui">
@@ -27,22 +28,21 @@
         </div>
     </nav>
 
-
-    <!--<div class="sideNav brown darken-4">-->
-        <!--<div class="collection brown darken-4">-->
-            <!--<a href="#!" class="collection-item brown darken-4">Alvin</a>-->
-            <!--<a href="#!" class="collection-item brown darken-4">Alvin</a>-->
-            <!--<a href="#!" class="collection-item brown darken-4">Alvin</a>-->
-            <!--<a href="#!" class="collection-item brown darken-4">Alvin</a>-->
-        <!--</div>-->
-    <!--</div>-->
     <ul id="slide-out" class="side-nav fixed brown darken-4">
-        <li><a href="">Home</a></li>
+
+        <h4 class="white-text">
+            <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                <path fill="#FFFFFF" d="M5,9.5L7.5,14H2.5L5,9.5M3,4H7V8H3V4M5,20A2,2 0 0,0 7,18A2,2 0 0,0 5,16A2,2 0 0,0 3,18A2,2 0 0,0 5,20M9,5V7H21V5H9M9,19H21V17H9V19M9,13H21V11H9V13Z" />
+            </svg>
+            Menu
+        </h4>
+
+        <li><a href="#!">Home</a></li>
         <li>
             <ul class="collapsible collapsible-accordion">
                 <li>
                     <a class="collapsible-header">Categorias</a>
-                    <div class="collapsible-body">
+                    <div style="margin-left: 16px;" class="collapsible-body">
                         <ul class="brown darken-4">
                             <a href="">
                                 <svg style="width:24px;height:24px" viewBox="0 0 24 24">
@@ -93,18 +93,26 @@
         </li>
         <li><a href="#!">Meu Perfil</a></li>
         <li><a href="#!">Configurações</a></li>
+
+        <h4 class="white-text">
+            <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                <path fill="#FFFFFF" d="M5,13H19V11H5M3,17H17V15H3M7,7V9H21V7" />
+            </svg>
+            Notificações
+        </h4>
+
+        <!--<img src="images/doge-icon-01.svg" alt="">-->
     </ul>
-    <li data-activates="slide-out"></li>
+    <!--<li data-activates="slide-out"></li>-->
 
 
     <main>
-
         <div class="row">
             <div class="col s9 gambi">
-                <ul class="tabs ">
-                        <li class="tab col s3"><a class="active brown-text" href="#new">Novos</a></li>
-                        <li class="tab col s3"><a class="brown-text" href="#hot">Mais visitados</a></li>
-                        <li class="tab col s3"><a class="brown-text" href="#ending">Acabando</a></li>
+                <ul class="tabs">
+                    <li class="tab col s3"><a class="active brown-text" href="#new">Novos</a></li>
+                    <li class="tab col s3"><a class="brown-text" href="#hot">Mais visitados</a></li>
+                    <li class="tab col s3"><a class="brown-text" href="#ending">Acabando</a></li>
                 </ul>
             </div>
             <div id="new" class="col s12">
@@ -175,26 +183,103 @@
         <div id="hot" class="col s12">Test 2</div>
         <div id="ending" class="col s12">Test 4</div>
 
+        <!--botão de adicionar leilão-->
+        <div class="fixed-action-btn horizontal">
+            <a class="modal-trigger btn-floating btn-large waves-effect waves-light brown tooltipped" href="#modal1" data-position="top" data-delay="50" data-tooltip="Leiloar item">
+                <i class="large material-icons">library_add</i>
+            </a>
+        </div>
 
+        <div id="modal1" class="modal bottom-sheet">
+            <div class="modal-content">
+                <h4>Preencha o formulário abaixo</h4>
+                <form>
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <input id="item_name" type="text" class="validate" placeholder=" ">
+                            <label for="item_name">Nome do item</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <textarea id="descripition" class="materialize-textarea" placeholder="Informações relevantes sobre o item"></textarea>
+                            <label for="descripition">Descrição</label>
+                        </div>
+                    </div>
+                    <div class="row">
 
+                        <!--TODO: ADICIONAR MASCARA-->
+                        <div class="input-field col s3">
+                            <input id="price" type="number" class="validate">
+                            <label for="price">Preço inicial</label>
+                        </div>
+
+                        <!--TODO: ADICIONAR MASCARA-->
+                        <div class="input-field col s3">
+                            <input id="time" type="number" class="validate">
+                            <label for="time">Tempo inicial</label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="input-field col s3">
+                            <select>
+                                <option value="new">Novo</option>
+                                <option value="used">Usado</option>
+                            </select>
+                            <label>Estado de Uso</label>
+                        </div>
+
+                        <div class="file-field input-field col s5">
+                            <div class="btn">
+                                <span>Imagem</span>
+                                <input type="file">
+                            </div>
+                            <div class="file-path-wrapper">
+                                <input class="file-path validate" type="text">
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="teste">
+                                <span class="helper"></span>
+                                <img id="output">
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Ok</a>
+            </div>
+        </div>
 
     </main>
 
 
-    <script src="js/jquery.js"></script>
-    <script src="js/materialize.js"></script>
-    <script src="js/init.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
     <script>
-        $('nav+ul+li').sideNav({
-            menuWidth: 400,
-            closeOnClick: false
-        });
+        $(document).ready(function () {
+            $('.modal').modal();
 
-        $("label+i").click(function () {
-            $(this).prev().prev().val("")
-        });
+            $('select').material_select();
 
+            $("label+i").click(function () {
+                $(this).prev().prev().val("")
+            });
 
+            $("input[type=file]").change(function(event) {
+                var reader = new FileReader();
+                reader.onload = function(){
+                    var output = document.getElementById('output');
+                    output.src = reader.result;
+                };
+                reader.readAsDataURL(event.target.files[0]);
+                console.log(1)
+            })
+
+        })
     </script>
 </body>
 </html>
