@@ -1,76 +1,78 @@
-// // number of drops created.
-// var nbDrop = 158;
-//
-// // function to generate a random number range.
-// function randRange( minNum, maxNum) {
-//     return (Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum);
-// }
-//
-// // function to generate drops
-// function createRain() {
-//
-//     for( i=1;i<nbDrop;i++) {
-//         var dropLeft = randRange(0,1600);
-//         var dropTop = randRange(-1000,1400);
-//
-//         $('.rain').append('<img src="images/doge-icon-01.svg" class="icon" id="drop'+i+'">');
-//         $('#drop'+i).css('left',dropLeft);
-//         $('#drop'+i).css('top',dropTop);
-//     }
-//
-// }
-// Make it rain
-// createRain();
+/**
+ * Created by leluk on 22/11/2016.
+ */
+$(document).ready(function () {
+    function dogeTitle(title) {
+        $("main").prepend(`
+           <p class="service-name animated bounceInRight">${title}</p>
+           <p class="service-name shadow animated bounceInRight">${title}</p>
+                <div class="logo">
+                    <div class="inner-circle">
+                        <div class="border"></div>
+                        <img class="doge" src="images/doge-01.png" alt="">
+                    </div>
+                </div>`)
+    }
 
-window.onload = function () {
-
-    setTimeout(function () {
-        $('.logo').addClass("bounceIn");
-    },1000);
-
-    setTimeout(function () {
-        $('.service-name, .service-name-shadow').addClass("bounceIn");
-    },1500);
-
-    setTimeout(function () {
-        $('nav').addClass("slideInDown");
-    },1800);
-
-    var nDoge = 60;
-
-    function rain(){
-
-        for(i=1; i < nDoge; i++){
-            var duration = Math.random() * (4-2) + 2;
-            var left = Math.random() * 50;
-            var delay = Math.random() * 3;
-            if(i >= nDoge/2){
-                left = -left;
-            }
-            $('.rain').append(`<img class='icon' src='images/doge-icon-01.svg'
-            style='left:${left}%; animation-delay: ${delay}s; animation-duration: ${duration}s' >`)
+    //rotinas para exibição do titulo de cada menu
+    $('.menu-item').click(function () {
+        if($(this).hasClass("tooltipped")){
+            dogeTitle($(this).attr("data-tooltip"))
+        }else{
+            dogeTitle($(this).html())
         }
-    }
-    setTimeout(rain(), 2000);
-};
-var greetings = ["wow", "such fun", "so doge", "so much doge rain", "such navbar", "such home", "so rounded border", "so many accounts", "dogelão", "so much #BFA961", "so much hold spacebar"];
-var lastgreeting;
-var number = 1;
+    });
 
-setInterval(function () {
-
-    //prevent last greeting from repeating itself
-    while(lastgreeting == greetings[number]){
-        number = Math.floor(Math.random() * greetings.length);
-    }
-    $(".phrase").html(greetings[number]);
-    lastgreeting = greetings[number];
-
-},1000);
+    $('.modal').modal({
+        ready: function () {
+            $('.modal-close, .modal-overlay').click(function () {
+                $('.service-name, .logo').animate({
+                    opacity: 0
+                }, 300, function () {
+                    $('.service-name, .logo').remove()
+                });
+            });
+        }
+    });
 
 
-$(document).mouseover(function (event) {
+    //inicializar checkboxes materialize
+    $('select').material_select();
 
-})
+    $('.datepicker').pickadate({
+        onStart: () => {
+            $('.picker').appendTo('body');
+        },
+        selectMonths: true, // Creates a dropdown to control month
+        selectYears: 15 // Creates a dropdown of 15 years to control year
+    });
 
+    //nao me lembro pra q fiz isso
+    $("label+i").click(function () {
+        $(this).prev().prev().val("")
+    });
 
+    //exibição da imagem selecionada
+    $("input[type=file]").change(function(event) {
+        var reader = new FileReader();
+        reader.onload = function(){
+            var output = document.getElementById('output');
+            output.src = reader.result;
+        };
+        reader.readAsDataURL(event.target.files[0]);
+        console.log(1)
+    });
+
+    VMasker(document.querySelector(".data-js-input")).maskMoney({
+        // Decimal precision -> "90"
+        precision: 2,
+        // Decimal separator -> ",90"
+        separator: ',',
+        // Number delimiter -> "12.345.678"
+        delimiter: '.',
+        // Money unit -> "R$ 12.345.678,90"
+        unit: 'R$',
+        // Money unit -> "12.345.678,90 R$"
+        zeroCents: false
+    });
+});

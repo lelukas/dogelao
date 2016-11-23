@@ -6,10 +6,6 @@ ul.side-nav a{
     color: white;
 }
 
-.card{
-
-}
-
 main, nav{
     padding-left: 400px;
 }
@@ -67,13 +63,13 @@ form>div>div>input:first-child{
     margin-top: 36px !important;
 }
 
-.teste{
+.image-container{
     position: absolute;
     top: 39%;
     right: 10%;
     width:210px;
     height:210px;
-    background-color: #C5C5C5;
+    /*background-color: #C5C5C5;*/
 
     display: -webkit-flexbox;
     display: -ms-flexbox;
@@ -85,7 +81,7 @@ form>div>div>input:first-child{
     align-items: center;
     justify-content: center;
 }
-.teste>img{
+.image-container>img{
     /*position: relative;*/
 
     /*background: #3A6F9A;*/
@@ -102,6 +98,128 @@ form>div>div>input:first-child{
     vertical-align: middle;
 }
 
-#modal1{
-    max-height: 85% !important;
+.bottom-sheet{
+    max-height: 80% !important;
 }
+
+.picker__frame{
+    top: 5% !important;;
+}
+
+.inner-circle{
+    width: 380px;
+    height: 380px;
+    background: #BFA961;
+    border-radius: 50%;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.doge{
+    width: 302px;
+    height:auto;
+    position: absolute;
+    left: calc(50% - 151px);
+}
+
+.border{
+    width: 400px;
+    height: 400px;
+    border: 13px solid #432715;
+    border-radius: 50%;
+    position: absolute;
+    top: calc(50% - 200px);
+    left: calc(50% - 200px);
+    z-index: 99;
+}
+
+.logo{
+    z-index: 9001;
+    position: fixed;
+    top: -13%;
+    right: -22%;
+    transform: scale(0.5);
+    /*opacity: 0;*/
+    animation-name: slide;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.service-name{
+    font-family: "I fink u freeky";
+    font-size: 4em;
+    position: fixed;
+    top: 0%;
+    right: 16%;
+    z-index: 9000;
+    color: #C4BC3A;
+    /*opacity: 0;*/
+}
+
+.shadow{
+    z-index: 8999;
+    font-size: 4em;
+    top: calc(0% + 3px);
+    right: calc(16% + 3px);
+    color: #895229;
+    /*opacity: 0;*/
+}
+
+.modal-title{
+    position: fixed;
+    top: -20%;
+
+}
+
+.panel{
+    z-index: 998;
+    top: 0;
+    left: 100%;
+    position: fixed;
+    background-color: white;
+    height: 100%;
+    width: 100%;
+    padding-left: 400px;
+}
+
+.panel>.content-panel{
+    margin-top: 20%;
+    overflow-y: scroll;
+    max-height:500px;
+    margin-left: 5%;
+    height: 500px;
+    width: 95%;
+}
+
+.show-panel{
+    animation-name: show-panel;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+}
+
+.dismiss-panel{
+    animation-name: dismiss-panel;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+}
+
+@keyframes slide {
+    100%{
+        right: -6%;
+    }
+}
+
+@keyframes show-panel {
+    100%{
+        left: 0;
+    }
+}
+
+@keyframes dismiss-panel {
+    100%{
+        left: 100%;
+    }
+}
+
